@@ -1,0 +1,18 @@
+[PS : psudo code is based on Naive Bayes Binary classification for other classifications algorithm would be littile different.]
+
+Psudo code:
+1. Resetting all pheriperals and initilizing flash, systick.
+2. Intilize the bus clocks,ram clocks and periperal clocks.
+3. Intilizing a pointer to dataset containing Naive Baye's Theorm input data.
+3. Setting up the unused GPIO's to Analog mode(to minimize the power consumption).
+4. Initilizing RTC and setting up the clocks, interrupts.
+5. Infinite While LOOP: 
+			[- Enable clock to all GPIO's.]
+			[- Setting the GPIO to analog input mode.]
+			[- Disabling the GPIO clocks.]
+			- RUN the Naive Baye's Binary therom on dataset to determine the output.
+			- Disabling the RTC timer interrupts.
+			- Clearing the PWR_FLAG_WU.
+			- Setting up the wake up timer interrupt to 10ms.
+			- Entering the micro controller to STOP 0 mode.
+			- System clock configuration after waking it from STOP mode.
